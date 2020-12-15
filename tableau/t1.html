@@ -1,0 +1,49 @@
+! <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let mois = ['Janvier', 'février', 'mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre','Octobre', 'Novembre', 'Decembre'];
+console.table(mois);
+
+console.log(mois[2]);
+
+console.log(mois[5]);
+
+mois[7] = 'Aoùt'
+console.log(mois);
+
+// exo 5
+let haut = { 02 : "Aisne", 59 : "Nord", 60 : "Oise", 62 : 'Pas de Calais', 80 : 'Somme' };
+console.table(haut)
+
+// exo 6
+console.log(haut[59]);
+
+// exo 7
+haut[51] = 'Marne';
+console.table(haut);
+
+// exo 8 Avec le tableau de l'exercice 1 et une boucle, afficher toutes les valeurs de ce tableau.
+for (const valeur in mois) {
+        console.table(mois[valeur])
+    }
+
+// exo 9 Avec le tableau de l'exercice 5, afficher toutes les valeurs de ce tableau.
+for (const i in haut) {
+        console.table(haut[i])
+    }
+
+// exo 10 Avec le tableau de l'exercice 5, afficher toutes les valeurs de ce tableau ainsi que les clés associés. 
+// Cela pourra être, par exemple, de la forme : "Le département" + nom_departement + "a le numéro" + num_departement
+
+for(const i in haut){
+              console.log(`Le département ${haut[i]} a le numero ${i}`)
+}
+    </script>
+</body>
+</html>
